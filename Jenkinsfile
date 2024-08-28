@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     tools { 
         maven 'Maven'
     }
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sshagent(['tomcat']) {
                     sh '''
-                    scp -o strictHostkeyChecking=no target/your-project-1.0-SNAPSHOT.jar ubuntu@15.206.124.53:/home/ubuntu/prod/apache-tomcat-10.1.28/webapps/webapp.war
+                    scp -o strictHostkeyChecking=no target/your-project-1.0-SNAPSHOT.jar ubuntu@15.206.124.53:/prod/apache-tomcat-10.1.28/webapps/webapp.war
                     '''
                 }
             }
