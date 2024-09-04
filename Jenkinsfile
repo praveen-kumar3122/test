@@ -14,8 +14,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 awsCodeDeploy(
-                    applicationName: 'your-application-name',
-                    deploymentGroupName: 'your-deployment-group-name',
+                    applicationName: 'test',
+                    deploymentGroupName: 'testdg',
                     deploymentConfigName: 'CodeDeployDefault.OneAtATime',
                     description: 'Deployment description',
                     waitForCompletion: true
