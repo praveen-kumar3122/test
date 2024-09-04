@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'git@github.com:praveen-kumar3122/test.git', branch: 'main', credentialsId: 'github-ssh-key'
+                git url: 'https://github.com/praveen-kumar3122/test.git', branch: 'main', credentialsId: 'github-ssh-key'
             }
         }
         stage('Build') {
