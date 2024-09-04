@@ -28,7 +28,7 @@ pipeline {
                     def deployResult = awsCodeDeploy applicationName: 'test',
                                                       deploymentGroupName: 'testdg',
                                                       s3Bucket: 'code-deploye-b1',
-                                                      s3Key: 'test.zip'
+                                                      s3Key: 'my-app.zip'
                     echo "Deployment result: ${deployResult}"
                 }
             }
